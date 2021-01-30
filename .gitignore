@@ -1,0 +1,10 @@
+.*
+!.gitignore
+*.py[co]
+*~
+/env/
+/src/
+/filestore/
+/logs/
+/extra_addons
+/docs
