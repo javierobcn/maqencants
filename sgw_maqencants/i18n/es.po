@@ -1,0 +1,147 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sgw_maqencants
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-11 14:56+0000\n"
+"PO-Revision-Date: 2019-10-11 17:14+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "&amp;nbsp;<span>on</span>"
+msgstr "&amp;nbsp;<span>en</span>"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid ""
+"<span groups=\"account.group_show_line_subtotals_tax_excluded\">Amount</span>\n"
+"                                    <span groups=\"account.group_show_line_subtotals_tax_included\">Total Price</span>"
+msgstr ""
+"<span groups=\"account.group_show_line_subtotals_tax_excluded\">Importe</span>\n"
+"                                    <span groups=\"account.group_show_line_subtotals_tax_included\">Precio Total</span>"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "<span>Description</span>"
+msgstr "<span>Descripción</span>"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "<span>Disc.(%)</span>"
+msgstr "<span>Desc.(%)</span>"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "<span>Precio Neto</span>"
+msgstr ""
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "<span>Quantity</span>"
+msgstr "<span>Cantidad</span>"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "<span>Source Document</span>"
+msgstr "<span>Documento Origen</span>"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "<strong class=\"mr16\">Subtotal</strong>"
+msgstr ""
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "<strong class=\"text-center\">Scan me with your banking app.</strong><br/><br/>"
+msgstr "<strong class=\"text-center\">Escanéame con tu aplicación bancaria.</strong><br/><br/>"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "<strong class=\"text-center\">The SEPA QR Code informations are not set correctly.</strong><br/>"
+msgstr "<strong class=\"text-center\">Las informaciones del código QR SEPA no están configuradas correctamente..</strong><br/>"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "<strong>Customer Code:</strong>"
+msgstr "<strong>Código de cliente:</strong>"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "<strong>Description:</strong>"
+msgstr "<strong>Descripción:</strong>"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "<strong>Due Date:</strong>"
+msgstr "<strong>Fecha de vencimiento:</strong>"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "<strong>Invoice Date:</strong>"
+msgstr "<strong>Fecha factura:</strong>"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "<strong>Reference:</strong>"
+msgstr "<strong>Referencia:</strong>"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "<strong>Source:</strong>"
+msgstr "<strong>Origen:</strong>"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "<strong>Subtotal</strong>"
+msgstr ""
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "<strong>Total</strong>"
+msgstr ""
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "Cancelled Invoice"
+msgstr "Factura cancelada"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "Credit Note"
+msgstr "Abono"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "Draft Invoice"
+msgstr "Factura borrador"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "Please use the following communication for your payment :"
+msgstr "Por favor utilice la siguiente referencia al realizar su pago: "
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "Vendor Bill"
+msgstr "Factura de proveedor"
+
+#. module: sgw_maqencants
+#: model_terms:ir.ui.view,arch_db:sgw_maqencants.maqencants_report_invoice_document_inherited
+msgid "Vendor Credit Note"
+msgstr "Nota de crédito de proveedor"
