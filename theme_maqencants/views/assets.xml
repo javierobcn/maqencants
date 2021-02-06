@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_frontend" name="My style" inherit_id="website.assets_frontend">
+        <xpath expr="link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss" href="/theme_maqencants/static/scss/style.scss"/>
+        </xpath>
+    </template>
+    <template id="_assets_primary_variables" name="My SCSS variables" inherit_id="website._assets_primary_variables">
+    <xpath expr="link[last()]" position="after">
+        <link rel="stylesheet" type="text/scss" href="/theme_maqencants/static/scss/primary_variables.scss"/>
+    </xpath>
+</template>
+</odoo>

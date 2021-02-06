@@ -1,0 +1,106 @@
+/* HEADER AREA */
+
+.top-header{
+  background-color: black;
+  @include media-breakpoint-down(sm) {
+    min-height:70px;
+  }
+}
+
+.logo {
+  position: absolute;
+  @include media-breakpoint-only(xs) {
+    max-width: 250px;
+    top:-5px;
+  }
+
+  @include media-breakpoint-only(md) {
+    max-width: 270px;
+    top:-50px;
+    left:15px;
+  }
+  @include media-breakpoint-only(xl) {
+    max-width: 360px;
+    top: -40px;
+  }
+  @include media-breakpoint-up(xl) {
+    max-width: 400px;
+    top: -40px;
+  }
+}
+
+#top_menu_collapse {
+  // position: relative;
+  /* @include media-breakpoint-up(xl) {
+    top: 30px;
+  }
+  @include media-breakpoint-down(xl) {
+    top: 30px;
+  } */
+
+}
+
+.navbar {
+ /*  @include media-breakpoint-up(xl) {
+
+  }
+  @include media-breakpoint-down(xl) {
+    min-height: 130px;
+  }
+ */
+}
+
+.boxEnvios {
+  border: 1px solid #f4e715;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  padding: 5px 5px;
+  display: inline-block;
+  /* @include media-breakpoint-up(xl) {
+    right: 290px; 
+  }
+  @include media-breakpoint-down(xl) {
+    right: 45px; 
+  } */
+
+}
+
+.boxEnvios2 {
+ /*  @include media-breakpoint-down(xl) {
+    right: 210px;
+  }
+  @include media-breakpoint-up(xl) {
+    right: 460px; 
+  } */
+
+}
+
+.txtEnvios {
+  position: relative;
+  top: -5px;
+  right: -3px;
+}
+
+.navbar-toggler{
+  background-color: #f4e715;
+  
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler {
+  border-color: rgb(0, 0, 0);
+} 
+
+#top_menu {
+  padding-top: 1em;
+}
+
+.fa {
+  color:$black;
+}
+
+.white{
+  color: $white!important;
+}

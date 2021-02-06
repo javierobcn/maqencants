@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- Customize post-header 
+    <template id="custom_message" inherit_id="website.layout" name="Custom Header">
+        
+        <xpath expr="//div[@id='wrapwrap']/main" position="before">
+            <div class="container">
+                <div class="alert alert-info mt16" role="alert">
+                    <strong>Welcome</strong> in our website!
+                </div>
+            </div>
+        </xpath>
+    </template>  -->
+
+	<!-- Customize header -->
+	<template id="custom_message" inherit_id="website.layout" name="Custom Header">
+		<xpath expr="//header//nav" position="before">
+			<div class="top-header">
+				<div class="container">
+					<div class="row pt-3">
+						<div class="col-md-12 text-lg-right text-xl-right text-md-right text-sm-center ">
+							<span class="boxEnvios boxEnvios2">
+								<i class="fontawesome-icon white fa fa-2x fa-truck circle-yes"></i>
+								<span class="small txtEnvios">Enviamos a toda España</span>
+							</span>
+							<span class="boxEnvios">
+								<i class="fa fa-2x white fa-share-square-o "></i>
+								<span class="small txtEnvios">Entregas en 24-72h</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</xpath>
+	
+		<!-- Customize logo -->
+		<xpath expr="//header//a[hasclass('navbar-brand')]" position="replace">
+			<a href="/" class="navbar-brand">
+				<img src="/web/image/res.company/1/logo?unique=fec7f0a" class="img logo"/>
+			</a>
+		</xpath>
+
+		<!-- add a padding bottom in container bottom -->
+		<xpath expr="//header//nav/div[hasclass('container')]" position="attributes">
+			<attribute name="class">container pb-3</attribute>
+		</xpath>
+
+		<!-- for Mobile, we align the text in the menus to the left -->
+        <xpath expr="//ul[@id='top_menu']" position="attributes">
+			<attribute name="class">nav navbar-nav ml-auto text-sm-left</attribute>
+		</xpath>
+
+		<!-- for Mobile, we add a padding to the menu expanded 
+        <xpath expr="//div[@id='top_menu_collapse']" position="attributes">
+			<attribute name="class">nav navbar-nav ml-auto text-sm-left</attribute>
+		</xpath> -->
+
+
+
+	</template>
+</odoo>
