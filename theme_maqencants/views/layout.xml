@@ -19,7 +19,7 @@
 				<div class="container">
 					<div class="row pt-3">
 						<div class="col-md-12 text-lg-right text-xl-right text-md-right text-sm-center ">
-							<span class="boxEnvios boxEnvios2">
+							<span class="boxEnvios boxEnvios2 mr-3">
 								<i class="fontawesome-icon white fa fa-2x fa-truck circle-yes"></i>
 								<span class="small txtEnvios">Enviamos a toda España</span>
 							</span>

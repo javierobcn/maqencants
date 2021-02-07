@@ -54,7 +54,7 @@
   border: 1px solid #f4e715;
   color: rgb(255, 255, 255);
   font-size: 14px;
-  padding: 5px 5px;
+  padding: 5px 10px;
   display: inline-block;
   /* @include media-breakpoint-up(xl) {
     right: 290px; 
@@ -104,3 +104,19 @@
 .white{
   color: $white!important;
 }
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+	color:$white;
+	background-color: $black;
+}
+
+footer {
+  border-top: 5px solid theme-color('primary');
+  background-color: $black!important;
+}
+
+.o_footer_copyright {
+  background-color: $black!important;
+}
+
+header {border-bottom: 5px solid theme-color('primary');
+  background-color: $black!important;}
