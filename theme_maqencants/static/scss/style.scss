@@ -1,5 +1,4 @@
 /* HEADER AREA */
-
 .top-header{
   background-color: black;
   @include media-breakpoint-down(sm) {
@@ -29,37 +28,16 @@
   }
 }
 
-#top_menu_collapse {
-  // position: relative;
-  /* @include media-breakpoint-up(xl) {
-    top: 30px;
-  }
-  @include media-breakpoint-down(xl) {
-    top: 30px;
-  } */
-
-}
-
-.navbar {
- /*  @include media-breakpoint-up(xl) {
-
-  }
-  @include media-breakpoint-down(xl) {
-    min-height: 130px;
-  }
- */
-}
-
 .boxEnvios {
   border: 1px solid #f4e715;
   color: rgb(255, 255, 255);
   font-size: 14px;
   padding: 5px 10px;
   display: inline-block;
-  /* @include media-breakpoint-up(xl) {
-    right: 290px; 
+  @include media-breakpoint-only(xs) {
+    padding: 5px 5px;
   }
-  @include media-breakpoint-down(xl) {
+  /* @include media-breakpoint-down(xl) {
     right: 45px; 
   } */
 
@@ -120,3 +98,11 @@ footer {
 
 header {border-bottom: 5px solid theme-color('primary');
   background-color: $black!important;}
+
+h6 > a {
+  color: $black;
+}
+
+h6 > a:hover {
+  color: $black;
+}
