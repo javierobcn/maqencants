@@ -9,8 +9,12 @@
 .logo {
   position: absolute;
   @include media-breakpoint-only(xs) {
-    max-width: 250px;
-    top:-5px;
+    max-width: 230px;
+    top:0px;
+  }
+  @include media-breakpoint-up(sm) {
+    max-width: 350px;
+    top:-50px;
   }
 
   @include media-breakpoint-only(md) {
@@ -39,16 +43,6 @@
   }
   /* @include media-breakpoint-down(xl) {
     right: 45px; 
-  } */
-
-}
-
-.boxEnvios2 {
- /*  @include media-breakpoint-down(xl) {
-    right: 210px;
-  }
-  @include media-breakpoint-up(xl) {
-    right: 460px; 
   } */
 
 }
