@@ -9,6 +9,6 @@ class SaleOrderLine(models.Model):
     price_unit = fields.Float(
         "Unit Price",
         required=True,
-        digits=2,
+        digits=(16, 2),
         default=0.0,
     )
