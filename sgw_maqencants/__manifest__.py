@@ -34,7 +34,7 @@
         'views/invoice_report_inherited.xml',
     ],
     'qweb': [
-        'static/src/xml/*.xml',
+        'static/src/xml/pos.xml',
     ],
     'demo': [],
     'test': [],

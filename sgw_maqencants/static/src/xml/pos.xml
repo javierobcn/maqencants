@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modifica el POS para mostrar solo 2 decimales en los precios de venta -->
+<templates id="point_of_sale_show_default_code.template" inherit_id="point_of_sale.template">
+    <t t-extend="Product">
+        <t t-jquery="div.product-img" t-operation="replace">
+             <div class="product-img">
+                <img t-att-src='image_url' alt="Product image"/>
+                <t t-if="!product.to_weight">
+                    <span class="price-tag">
+                        <t t-esc="widget.format_currency(product.get_price(pricelist, 1),2)"/>
+                    </span>
+                </t>
+                <t t-if="product.to_weight">
+                    <span class="price-tag">
+                        <t t-esc="widget.format_currency(product.get_price(pricelist, 1),2)+'/'+widget.pos.units_by_id[product.uom_id[0]].name"/>
+                    </span>
+                </t>
+            </div>
+        </t>
+    </t>
+</templates>
