@@ -100,3 +100,25 @@ h6 > a {
 h6 > a:hover {
   color: $black;
 }
+
+.nav-pills > li > a {background-color: $black;}
+
+#products_grid_before {background-color: $black;}
+
+.fa-search,.fa-minus, .fa-plus, .fa-chevron-left {color:$white;}
+
+.page-link {background-color: $black;}
+
+.page-item.active .page-link {
+	z-index: 1;
+	color: $black;
+	background-color: #f4e715;
+	border-color: #f4e715;
+}
+
+/* a {
+  color:$black;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+} */

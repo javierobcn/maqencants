@@ -51,7 +51,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6 white text-center text-md-left">
-							<span>Copyright &amp;copy;</span> <span>Maquinaria Encants</span>
+							<span>Copyright &amp;copy;</span> <span> 2021 Maquinaria Encants</span>
 						</div>
 						<div class="col-lg-6 text-right o_not_editable" t-if="not editable">
 							<t t-call="website.brand_promotion"/>
