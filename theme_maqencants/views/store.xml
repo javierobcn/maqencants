@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-	<!-- Customize header -->
-	<template id="custom_search" inherit_id="website_sale.search" name="Custom Search">
-        <xpath expr="//header//nav/div[hasclass('container')]" position="attributes">
-			<attribute name="class">container pb-3</attribute>
-		</xpath>
-    </template>
+	
 </odoo>
