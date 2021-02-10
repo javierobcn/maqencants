@@ -58,7 +58,6 @@ header {border-bottom: 5px solid theme-color('primary');
 }
 
 /* Menu Mobile */
-
 .navbar-toggler{
   background-color: #f4e715;
   border-color: rgb(0, 0, 0);
@@ -97,7 +96,7 @@ header {border-bottom: 5px solid theme-color('primary');
 
 /* mini-cart */
 .popover-body { background-color: $black; color: $white;}
-div.popover-body > div.o_comparelist_products.d-md-block > div > div.col-8.pl-2 > h6 > a {color: $white;}
+.popover-body > div.o_comparelist_products.d-md-block > div > div.col-8.pl-2 > h6 > a {color: $white;}
 
 
 /* Footer Area */
@@ -133,3 +132,5 @@ h6 > a:hover {
 .white{
   color: $white!important;
 }
+
+.text-warning {color: $black!important;}
