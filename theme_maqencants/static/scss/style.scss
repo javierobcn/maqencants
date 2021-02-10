@@ -95,8 +95,14 @@ header {border-bottom: 5px solid theme-color('primary');
 .nav-pills > li > a {background-color: $black;}
 
 /* mini-cart */
-.popover-body { background-color: $black; color: $white!important;}
+.popover-body {background-color: $black;}
+.h6 {color: $white!important;}
+.cart-line {color: $white!important;}
 
+/* Cart */
+.js_add_cart_json {background-color: $black;}
+.no-decoration {color:$black;}
+.o_payment_form_pay_icon_more {color:$black;}
 
 /* Footer Area */
 #footer {
@@ -126,7 +132,8 @@ h6 > a:hover {
   color:$black;
 }
 
-.fa-search,.fa-minus, .fa-plus, .fa-chevron-left, .fa-heart, .fa-exchange {color:$white;}
+.fa-search,.fa-minus, .fa-plus, .fa-chevron-left, .fa-heart, .fa-exchange {color:$white; background-color: $black!important;
+}
 
 .white{
   color: $white!important;
