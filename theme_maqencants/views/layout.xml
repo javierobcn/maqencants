@@ -43,21 +43,94 @@
 			</div>
 		</xpath>
 	</template>
-	
+
 	<!-- Customize Copyright in footer-->
 	<template id="layout_footer_copyright" inherit_id="website.layout" name="Footer Copyright">
-		<xpath expr="//footer" position="inside">
+		<!-- Customize Copyright in footer-->
+		<xpath expr="//footer/div[hasclass('o_footer_copyright')]" position="replace">
 			<div class="o_footer_copyright">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6 white text-center text-md-left">
-							<span>Copyright &amp;copy;</span> <span> 2021 Maquinaria Encants</span>
+							<span>Copyright &amp;copy;</span>
+							<span> 2021 Maquinaria Encants</span>
 						</div>
 						<div class="col-lg-6 text-right o_not_editable" t-if="not editable">
 							<t t-call="website.brand_promotion"/>
 						</div>
 					</div>
 				</div>
+			</div>
+		</xpath>
+		<!-- Customize Business name in footer Right -->
+		<xpath expr="//footer/div[1]/section/div/div/div[3]/h5" position="replace">
+			<h5>
+				<span>Maquinaria Encants </span>
+				<small> -					<a href="/aboutus">Nosotros</a>
+				</small>
+			</h5>
+		</xpath>
+		<!-- Customize footer block Left -->
+		<xpath expr="//footer/div[1]/section/div/div/div[1]" position="replace">
+			<div class="col-lg-4">
+				<h5>Productos y Servicios</h5>
+				<ul class="list-unstyled">
+					<li>
+						<a href="/">Inicio</a>
+					</li>
+					<li>
+						<a href="/aboutus">Nosotros</a>
+					</li>
+					<li>
+						<a href="/servicios">Servicios</a>
+					</li>
+					<li>
+						<a href="/tienda">Tienda</a>
+					</li>
+				</ul>
+			</div>
+		</xpath>
+
+		<!-- Customize footer block center -->
+		<xpath expr="//div[@id='connect']" position="replace">
+			<div class="col-lg-4" id="connect">
+				<h5>Contacte con nosotros</h5>
+				<ul class="list-unstyled">
+					<li>
+						<a href="/contactus">Contacto</a>
+					</li>
+					<li>
+						<i class="fa fa-phone white"/>
+						<span class="o_force_ltr" t-field="res_company.phone"/>
+					</li>
+					<li>
+						<i class="fa fa-envelope white"/>
+						<span t-field="res_company.email"/>
+					</li>
+				</ul>
+				<p>
+					<a t-if="website.social_facebook" t-att-href="website.social_facebook" class="btn btn-sm btn-link">
+						<i class="fa fa-2x fa-facebook-square white"/>
+					</a>
+					<a t-if="website.social_twitter" t-att-href="website.social_twitter" class="btn btn-sm btn-link">
+						<i class="fa fa-2x fa-twitter"/>
+					</a>
+					<a t-if="website.social_linkedin" t-att-href="website.social_linkedin" class="btn btn-sm btn-link">
+						<i class="fa fa-2x fa-linkedin"/>
+					</a>
+					<a t-if="website.social_youtube" t-att-href="website.social_youtube" class="btn btn-sm btn-link">
+						<i class="fa fa-2x fa-youtube-play"/>
+					</a>
+					<a t-if="website.social_googleplus" t-att-href="website.social_googleplus" class="btn btn-sm btn-link" rel="publisher">
+						<i class="fa fa-2x fa-google-plus-square"/>
+					</a>
+					<a t-if="website.social_github" t-att-href="website.social_github" class="btn btn-sm btn-link">
+						<i class="fa fa-2x fa-github"/>
+					</a>
+					<a t-if="website.social_instagram" t-att-href="website.social_instagram" class="btn btn-sm btn-link">
+						<i class="fa fa-2x fa-instagram"/>
+					</a>
+				</p>
 			</div>
 		</xpath>
 	</template>
