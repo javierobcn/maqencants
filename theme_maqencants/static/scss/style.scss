@@ -1,5 +1,8 @@
 /* HEADER AREA */
 
+header {border-bottom: 5px solid theme-color('primary');
+  background-color: $black!important;}
+
 .top-header{
   background-color: black;
   @include media-breakpoint-down(sm) {
@@ -68,39 +71,7 @@
   padding-top: 1em;
 }
 
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color:$white;
-	background-color: $black;
-}
-
-#footer {
-  border-top: 5px solid theme-color('primary');
-  background-color: $black!important;
-  color: $white;
-}
-
-.o_footer_copyright {
-  background-color: $black!important;
-}
-
-header {border-bottom: 5px solid theme-color('primary');
-  background-color: $black!important;}
-
-h6 > a {
-  color: $black;
-}
-
-h6 > a:hover {
-  color: $black;
-}
-
-.nav-pills > li > a {background-color: $black;}
-
-#products_grid_before {background-color: $black;}
-
-.fa-search,.fa-minus, .fa-plus, .fa-chevron-left, .fa-heart, .fa-exchange {color:$white;}
-
+/* shop  */
 .page-link {background-color: $black;}
 
 .page-item.active .page-link {
@@ -115,18 +86,39 @@ h6 > a:hover {
 }
 
 .show_coupon {color:$black}
+#products_grid_before {background-color: $black;}
 
-/* a {
-  color:$black;
-  text-decoration: none;
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-} */
+/* categories */
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+	color:$white;
+	background-color: $black;
+}
+.nav-pills > li > a {background-color: $black;}
 
+/* mini-cart */
 .popover-body { background-color: $black; color: $white;}
-
-
 div.popover-body > div.o_comparelist_products.d-md-block > div > div.col-8.pl-2 > h6 > a {color: $white;}
+
+
+/* Footer Area */
+#footer {
+  border-top: 5px solid theme-color('primary');
+  background-color: $black!important;
+  color: $white;
+}
+
+.o_footer_copyright {
+  background-color: $black!important;
+}
+
+/* Links */
+h6 > a {
+  color: $black;
+}
+
+h6 > a:hover {
+  color: $black;
+}
 
 
 
@@ -135,6 +127,8 @@ div.popover-body > div.o_comparelist_products.d-md-block > div > div.col-8.pl-2 
 .fa {
   color:$black;
 }
+
+.fa-search,.fa-minus, .fa-plus, .fa-chevron-left, .fa-heart, .fa-exchange {color:$white;}
 
 .white{
   color: $white!important;

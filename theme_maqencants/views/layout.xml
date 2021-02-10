@@ -64,7 +64,7 @@
 		</xpath>
 		<!-- Customize Business name in footer Right -->
 		<xpath expr="//footer/div[1]/section/div/div/div[3]/h5" position="replace">
-			<h5>
+			<h5 class="white">
 				<span>Maquinaria Encants </span>
 				<small> -					<a href="/aboutus">Nosotros</a>
 				</small>
@@ -73,7 +73,7 @@
 		<!-- Customize footer block Left -->
 		<xpath expr="//footer/div[1]/section/div/div/div[1]" position="replace">
 			<div class="col-lg-4">
-				<h5>Productos y Servicios</h5>
+				<h5 class="white">Productos y Servicios</h5>
 				<ul class="list-unstyled">
 					<li>
 						<a href="/">Inicio</a>
@@ -94,7 +94,7 @@
 		<!-- Customize footer block center -->
 		<xpath expr="//div[@id='connect']" position="replace">
 			<div class="col-lg-4" id="connect">
-				<h5>Contacte con nosotros</h5>
+				<h5 class="white">Contacte con nosotros</h5>
 				<ul class="list-unstyled">
 					<li>
 						<a href="/contactus">Contacto</a>
@@ -107,6 +107,11 @@
 						<i class="fa fa-envelope white"/>
 						<span t-field="res_company.email"/>
 					</li>
+					<li>
+						<i class="fa fa-map-marker white"/>
+						<span>Mercat dels Encants,<br/> Paradas B503 a B506<br/>Barcelona, España </span>
+					</li>
+				
 				</ul>
 				<p>
 					<a t-if="website.social_facebook" t-att-href="website.social_facebook" class="btn btn-sm btn-link">
