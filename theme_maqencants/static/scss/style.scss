@@ -95,8 +95,7 @@ header {border-bottom: 5px solid theme-color('primary');
 .nav-pills > li > a {background-color: $black;}
 
 /* mini-cart */
-.popover-body { background-color: $black; color: $white;}
-.popover-body > div.o_comparelist_products.d-md-block > div > div.col-8.pl-2 > h6 > a {color: $white;}
+.popover-body { background-color: $black; color: $white!important;}
 
 
 /* Footer Area */
