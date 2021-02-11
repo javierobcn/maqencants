@@ -124,8 +124,6 @@ h6 > a:hover {
   color: $black;
 }
 
-
-
 /* Font Awesome */
 
 .fa {
@@ -140,3 +138,12 @@ h6 > a:hover {
 }
 
 .text-warning {color: $black!important;}
+
+/* breadcrumbs */
+.breadcrumb {
+	background-color: #000;
+}
+
+.input-group > .form-control, .input-group > .custom-select, .input-group > .custom-file {
+	width: 100%;
+}

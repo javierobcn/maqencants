@@ -140,4 +140,42 @@
 		</xpath>
 	</template>
 
+	<!-- Customize breadcrumbs in /shop -->
+
+	<!-- caja de busqueda superior en /shop agregamos un estilo maxwidth-->
+	<record model="ir.ui.view" id="sgw_website_search_box_inherited">
+		<field name="name">sgw_teme.website.search_box_inherited</field>
+		<field name="inherit_id" ref="website.website_search_box" />
+		<field name="arch" type="xml">
+			<input name="search" position="attributes">
+				<attribute name="class">search-query form-control oe_search_box
+					maxwidth
+				</attribute>
+			</input>
+			<xpath expr="/t[1]/div[1]/div[1]" position="attributes">
+				<attribute name="class">input-group
+				</attribute>
+			</xpath>
+			
+		</field>
+	</record>
+
+	<template id="Sgw_website_sale_product_product"
+		inherit_id="website_sale.product" name="SGW Product View">
+		<xpath expr="//section[@id='product_detail']/div/div"
+			position="attributes">
+			<attribute name="class">col-md-8</attribute>
+		</xpath>
+
+		<xpath expr="//section[@id='product_detail']/div/div[2]"
+			position="attributes">
+			<attribute name="class">col-md-4</attribute>
+		</xpath>
+
+		<xpath expr="//div[@id='product_details']" position="attributes">
+			<attribute name="class">col-md-6 col-xl-6 offset-xl-0</attribute>
+		</xpath>
+	</template>
+
+
 </odoo>
