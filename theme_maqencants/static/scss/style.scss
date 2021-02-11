@@ -98,8 +98,10 @@ header {border-bottom: 5px solid theme-color('primary');
 .popover-body {background-color: $black;}
 .h6 {color: $white!important;}
 .cart-line {color: $white!important;}
+div.col-9 {color: #f4e715!important;}
 
-/* Cart */
+
+/* Cart page */
 .js_add_cart_json {background-color: $black;}
 .no-decoration {color:$black;}
 .o_payment_form_pay_icon_more {color:$black;}
@@ -151,3 +153,6 @@ h6 > a:hover {
 div.categ_tree_level > div:nth-child(1) > a {color: #f4e715!important;}
 
 li.breadcrumb-item > span {color: $white!important;}
+
+
+
