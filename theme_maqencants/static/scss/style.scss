@@ -147,3 +147,7 @@ h6 > a:hover {
 .input-group > .form-control, .input-group > .custom-select, .input-group > .custom-file {
 	width: 100%;
 }
+
+div.categ_tree_level > div:nth-child(1) > a {color: #f4e715!important;}
+
+li.breadcrumb-item > span {color: $white!important;}
