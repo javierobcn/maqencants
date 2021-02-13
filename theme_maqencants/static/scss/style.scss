@@ -139,6 +139,10 @@ h6 > a:hover {
   color: $white!important;
 }
 
+.black{
+  color: $black!important;
+}
+
 .text-warning {color: $black!important;}
 
 /* breadcrumbs */
@@ -154,5 +158,6 @@ div.categ_tree_level > div:nth-child(1) > a {color: #f4e715!important;}
 
 li.breadcrumb-item > span {color: $white!important;}
 
+.small > a {color:$black!important}
 
-
+a[href*="login"] {color:$black!important}
