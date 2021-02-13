@@ -70,6 +70,8 @@ header {border-bottom: 5px solid theme-color('primary');
   padding-top: 1em;
 }
 
+.dropdown-item.active, .dropdown-item:active {background-color:$black;}
+
 /* shop  */
 .page-link {background-color: $black;}
 
@@ -161,3 +163,4 @@ li.breadcrumb-item > span {color: $white!important;}
 .small > a {color:$black!important}
 
 a[href*="login"] {color:$black!important}
+
