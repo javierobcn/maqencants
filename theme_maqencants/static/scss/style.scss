@@ -162,5 +162,5 @@ li.breadcrumb-item > span {color: $white!important;}
 
 .small > a {color:$black!important}
 
-a[href*="login"] {color:$black!important}
-
+/* Ruta especifica para /web/signup/ enlace ¿ya tiene una cuenta? */
+form.oe_signup_form div.text-center.oe_login_buttons.pt-3 a.btn.btn-link.btn-sm {color:$black!important}
