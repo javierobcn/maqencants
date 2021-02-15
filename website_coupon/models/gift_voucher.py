@@ -36,7 +36,7 @@ class GiftVoucher(models.Model):
         ], string="Applicable on ", default='product'
     )
     product_id = fields.Many2one('product.product', string="Product")
-    product_categ = fields.Many2one('product.category', string="Product Category")
+    product_categ = fields.Many2many('product.public.category', string="Product Public Category")
     min_value = fields.Integer(string="Minimum Voucher Value", required=True)
     max_value = fields.Integer(string="Maximum Voucher Value", required=True)
     expiry_date = fields.Date(string="Expiry Date", required=True)

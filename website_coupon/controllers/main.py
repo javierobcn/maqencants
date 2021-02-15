@@ -106,8 +106,10 @@ class WebsiteCoupon(WebsiteSale):
                         # the voucher type is category ----------------------------
                         product_id = coupon.voucher.product_categ
                         for line in order.order_line:
-                            if line.product_id.categ_id.name == product_id.name:
-                                flag_product = True
+                            for cat in product_id:
+                                if line.product_id.categ_id.name == cat.name:
+                                    flag_product = True
+                                    break
                     elif voucher_type == 'all':
                         # the voucher is applicable to all products ----------------------------
                         flag_product = True

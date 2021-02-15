@@ -13,7 +13,9 @@
                                <field name="voucher_type" widget="radio"/>
                                <field name="product_id" attrs="{'invisible': [('voucher_type', 'in', ('category','all'))],
                                                             'required':[('voucher_type', '=', 'product')]}"/>
-                               <field name="product_categ" attrs="{'invisible': [('voucher_type', 'in', ('product','all'))],
+                               <field name="product_categ" 
+                               widget="many2many_tags"
+                                attrs="{'invisible': [('voucher_type', 'in', ('product','all'))],
                                                             'required':[('voucher_type', '=', 'category')]}"/>
                                <field name="min_value" />
                                <field name="max_value" />
