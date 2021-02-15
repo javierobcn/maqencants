@@ -72,6 +72,9 @@
                                <field name="partner_id" />
                                <field name="limit" />
                            </group>
+                            <group>
+                               <field name="min_amount_total" />
+                           </group>
                        </group>
                        <group string="Pricing">
                            <group>

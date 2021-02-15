@@ -114,13 +114,17 @@ class WebsiteCoupon(WebsiteSale):
                     elif voucher_type == 'all':
                         # the voucher is applicable to all products ----------------------------
                         flag_product = True
+                    
+                    # If total < x Eur. not aplicable
+                    if order.amount_total < coupon.min_amount_total:
+                        flag_product = False
+                    
                     if flag_product:
                         # the voucher is applicable --------------------------------------
                         if type == 'fixed':
                             # coupon type is 'fixed'--------------------------------------
                             if voucher_val < order.amount_total:
                                 coupon_product.product_tmpl_id.write({'list_price': -voucher_val})
-
                             else:
                                 return request.redirect("/shop/cart?coupon_not_available=3")
                         elif type == 'percentage':

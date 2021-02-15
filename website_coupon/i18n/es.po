@@ -33,7 +33,7 @@ msgstr "Cupones aplicados"
 #. module: website_coupon
 #: model_terms:ir.ui.view,arch_db:website_coupon.voucher_code
 msgid "Apply"
-msgstr "Solicitar"
+msgstr "Descontar"
 
 #. module: website_coupon
 #: model:ir.model.fields,field_description:website_coupon.field_gift_coupon__code

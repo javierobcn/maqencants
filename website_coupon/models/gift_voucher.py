@@ -25,77 +25,93 @@ from odoo.exceptions import UserError
 
 
 class GiftVoucher(models.Model):
-    _name = 'gift.voucher'
+    _name = "gift.voucher"
 
     name = fields.Char(string="Name", required=True)
     voucher_type = fields.Selection(
         selection=[
-            ('product', 'Product'),
-            ('category', 'Product Category'),
-            ('all', 'All Products'),
-        ], string="Applicable on ", default='product'
+            ("product", "Product"),
+            ("category", "Product Category"),
+            ("all", "All Products"),
+        ],
+        string="Applicable on ",
+        default="product",
     )
-    product_id = fields.Many2one('product.product', string="Product")
-    product_categ = fields.Many2many('product.public.category', string="Product Public Category")
+    product_id = fields.Many2one("product.product", string="Product")
+    product_categ = fields.Many2many(
+        "product.public.category", string="Product Public Category"
+    )
     min_value = fields.Integer(string="Minimum Voucher Value", required=True)
     max_value = fields.Integer(string="Maximum Voucher Value", required=True)
     expiry_date = fields.Date(string="Expiry Date", required=True)
 
-
 class GiftCoupon(models.Model):
-    _name = 'gift.coupon'
+    _name = "gift.coupon"
 
     def get_code(self):
         size = 7
         chars = string.ascii_uppercase + string.digits
-        return ''.join(random.choice(chars) for _ in range(size))
+        return "".join(random.choice(chars) for _ in range(size))
 
     _sql_constraints = [
-        ('name_uniq', 'unique (code)', "Code already exists !"),
+        ("name_uniq", "unique (code)", "Code already exists !"),
     ]
 
     name = fields.Char(string="Name", required=True)
     code = fields.Char(string="Code", default=get_code)
-    voucher = fields.Many2one('gift.voucher', string="Voucher", required=True)
+    voucher = fields.Many2one("gift.voucher", string="Voucher", required=True)
     start_date = fields.Date(string="Start Date")
     end_date = fields.Date(string="End Date")
-    partner_id = fields.Many2one('res.partner', string="Limit to a Single Partner")
+    partner_id = fields.Many2one("res.partner", string="Limit to a Single Partner")
     limit = fields.Integer(string="Total Available For Each User", default=1)
     total_avail = fields.Integer(string="Total Available", default=1)
     voucher_val = fields.Float(string="Voucher Value")
-    type = fields.Selection([
-        ('fixed', 'Fixed Amount'),
-        ('percentage', 'Percentage'),
-    ], store=True, default='fixed')
+    type = fields.Selection(
+        [
+            ("fixed", "Fixed Amount"),
+            ("percentage", "Percentage"),
+        ],
+        store=True,
+        default="fixed",
+    )
     count = fields.Char(string="count")
+    min_amount_total = fields.Float(
+        string="Min. Order Amount",
+        help="The order total can't be less than the value of this field",
+    )
 
-    @api.onchange('voucher_val')
+    @api.onchange("voucher_val")
     def check_val(self):
-        if self.voucher_val > self.voucher.max_value or self.voucher_val < self.voucher.min_value:
+        if (
+            self.voucher_val > self.voucher.max_value
+            or self.voucher_val < self.voucher.min_value
+        ):
             raise UserError(_("Please check the voucher value"))
 
     @api.model
     def create(self, vals):
         res = super(GiftCoupon, self).create(vals)
-        vals['count'] = vals['total_avail']
+        vals["count"] = vals["total_avail"]
         return res
 
 
 class CouponPartner(models.Model):
-    _name = 'partner.coupon'
+    _name = "partner.coupon"
 
-    partner_id = fields.Many2one('res.partner', string="Partner")
+    partner_id = fields.Many2one("res.partner", string="Partner")
     coupon = fields.Char(string="Coupon Applied")
     number = fields.Integer(string="Number of Times Used")
 
 
 class PartnerExtended(models.Model):
-    _inherit = 'res.partner'
+    _inherit = "res.partner"
 
-    applied_coupon = fields.One2many('partner.coupon', 'partner_id', string="Coupons Applied")
+    applied_coupon = fields.One2many(
+        "partner.coupon", "partner_id", string="Coupons Applied"
+    )
 
 
 class SaleCoupon(models.Model):
-    _inherit = 'sale.order'
+    _inherit = "sale.order"
 
-    coupon_id = fields.Char(string='coupon')
+    coupon_id = fields.Char(string="coupon")
