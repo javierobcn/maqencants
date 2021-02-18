@@ -80,7 +80,8 @@ class WebsiteCoupon(WebsiteSale):
                     if today > coupon.end_date:
                         flag = False
             else:
-                flag = False
+                if curr_user.id != 4:  # Public User
+                    flag = False
         else:
             flag = False
         if flag:

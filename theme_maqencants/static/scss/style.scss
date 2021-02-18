@@ -164,3 +164,13 @@ li.breadcrumb-item > span {color: $white!important;}
 
 /* Ruta especifica para /web/signup/ enlace ¿ya tiene una cuenta? */
 form.oe_signup_form div.text-center.oe_login_buttons.pt-3 a.btn.btn-link.btn-sm {color:$black!important}
+
+/* brands */
+a[href*="/shop/brands?brand="] {color:$black!important}
+
+/* downloads */
+a[href*="?unique="] {color:$black!important}
+
+/* Login Form */
+a[href*="reset_password"] {color:$black!important;font-size:medium ;}
+a[href*="web/signup"] {color:$black!important;font-size:medium ;}
