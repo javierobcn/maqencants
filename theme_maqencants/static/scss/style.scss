@@ -100,8 +100,8 @@ header {border-bottom: 5px solid theme-color('primary');
 .popover-body {background-color: $black;}
 .h6 {color: $white!important;}
 .cart-line {color: $white!important;}
-div.col-9 {color: #f4e715!important;}
-
+div.col-9 {color: $primary!important;}
+#top_menu_collapse > ul > li > a > i  {color: $primary}
 
 /* Cart page */
 .js_add_cart_json {background-color: $black;}
@@ -134,7 +134,7 @@ h6 > a:hover {
   color:$black;
 }
 
-.fa-search,.fa-minus, .fa-plus, .fa-chevron-left, .fa-heart, .fa-exchange {color:$white; background-color: $black!important;
+.fa-search,.fa-minus, .fa-plus, .fa-chevron-left, .fa-heart, .fa-exchange, .fa-shopping.cart {color:$primary; background-color: $black!important;
 }
 
 .white{
@@ -174,3 +174,4 @@ a[href*="?unique="] {color:$black!important}
 /* Login Form */
 a[href*="reset_password"] {color:$black!important;font-size:medium ;}
 a[href*="web/signup"] {color:$black!important;font-size:medium ;}
+
