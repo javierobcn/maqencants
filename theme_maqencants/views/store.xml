@@ -29,36 +29,59 @@
             <attribute name="class">col-md-6 col-xl-6 offset-xl-0</attribute>
         </xpath>
 
-</template>
+    </template>
 
-<template id="sgw_recommended_products" inherit_id="website_sale.product" name="SGW Alternative">
-    <xpath expr="//div[@id='product_full_description']" position="after">
-        <div class="container mt32" t-if="product.alternative_product_ids">
-            <h3>Podría interesarle:</h3>
-            <div class="row mt16" style="">
-                <t t-foreach="product.alternative_product_ids" t-as="alt_product">
-                    <div class="col-lg-2" style="width: 170px; height:240px; float:left; display:inline; margin-right: 10px; overflow:hidden;">
-                        <div class="mt16 text-center" style="height: 100%;">
-                            <t t-set="combination_info" t-value="alt_product._get_combination_info()"/>
-                            <t t-set="product_variant" t-value="alt_product.env['product.product'].browse(combination_info['product_id'])"/>
-                            <div t-if="product_variant" t-field="product_variant.image" t-options="{'widget': 'image', 'class': 'rounded shadow o_alternative_product' }" />
-                            <div t-else="" t-field="alt_product.image" t-options="{'widget': 'image', 'class': 'rounded shadow o_alternative_product' }" />
-                            <h6>
-                                <a t-attf-href="/shop/product/#{ slug(alt_product) }" style="display: block">
-                                    <span t-att-title="alt_product.name" t-field="alt_product.name" style="display: block;" />
-                                </a>
-                            </h6>
+    <template id="sgw_recommended_products" inherit_id="website_sale.product" name="SGW Alternative">
+        <xpath expr="//div[@id='product_full_description']" position="after">
+            <div class="container mt32" t-if="product.alternative_product_ids">
+                <h3>Podría interesarle:</h3>
+                <div class="row mt16" style="">
+                    <t t-foreach="product.alternative_product_ids" t-as="alt_product">
+                        <div class="col-lg-2" style="width: 170px; height:240px; float:left; display:inline; margin-right: 10px; overflow:hidden;">
+                            <div class="mt16 text-center" style="height: 100%;">
+                                <t t-set="combination_info" t-value="alt_product._get_combination_info()"/>
+                                <t t-set="product_variant" t-value="alt_product.env['product.product'].browse(combination_info['product_id'])"/>
+                                <div t-if="product_variant" t-field="product_variant.image" t-options="{'widget': 'image', 'class': 'rounded shadow o_alternative_product' }" />
+                                <div t-else="" t-field="alt_product.image" t-options="{'widget': 'image', 'class': 'rounded shadow o_alternative_product' }" />
+                                <h6>
+                                    <a t-attf-href="/shop/product/#{ slug(alt_product) }" style="display: block">
+                                        <span t-att-title="alt_product.name" t-field="alt_product.name" style="display: block;" />
+                                    </a>
+                                </h6>
+                            </div>
                         </div>
-                    </div>
-                </t>
+                    </t>
+                </div>
             </div>
-        </div>
-    </xpath>
-</template>
+        </xpath>
+    </template>
 
-<record id="sgw_recommended_products" model="ir.ui.view">
-    <field name="active" eval="True"/>
-</record>
+    <record id="sgw_recommended_products" model="ir.ui.view">
+        <field name="active" eval="True"/>
+    </record>
 
+    <template id="sgw_share_product" name="Social Share Product" inherit_id="website_sale.product">
+        <xpath expr="//p[hasclass('text-muted')]" position="after">
+            <h6 class="text-uppercase border-top font-weight-bold" style="padding-top: 1rem !important;">Compartir este producto</h6>
+            <p>
+                <t t-set="share_url" t-value="product._compute_share_url()"/>
+                <a t-att-href="share_url['facebook']" target="_blank" class="btn btn-sm btn-link">
+                    <i class="fa fa-3x fa-facebook-square"/>
+                </a>
+                <a t-att-href="share_url['twitter']" target="_blank" class="btn btn-sm btn-link">
+                    <i class="fa fa-3x fa-twitter-square"/>
+                </a>
+                <a t-att-href="share_url['linkedin']" target="_blank" class="btn btn-sm btn-link">
+                    <i class="fa fa-3x fa-linkedin-square"/>
+                </a>
+                <a t-att-href="share_url['tumblr']" target="_blank" class="btn btn-sm btn-link">
+                    <i class="fa fa-3x fa-tumblr-square"/>
+                </a>
+                <a t-att-href="share_url['pinterest']" target="_blank" class="btn btn-sm btn-link">
+                    <i class="fa fa-3x fa-pinterest-square"/>
+                </a>
+            </p>
+        </xpath>
+    </template>
 
 </odoo>
