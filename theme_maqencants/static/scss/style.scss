@@ -1,12 +1,13 @@
 /* HEADER AREA */
+header {
+  border-bottom: 5px solid theme-color("primary");
+  background-color: $black !important;
+}
 
-header {border-bottom: 5px solid theme-color('primary');
-  background-color: $black!important;}
-
-.top-header{
+.top-header {
   background-color: black;
   @include media-breakpoint-down(sm) {
-    min-height:70px;
+    min-height: 70px;
   }
 }
 
@@ -14,17 +15,17 @@ header {border-bottom: 5px solid theme-color('primary');
   position: absolute;
   @include media-breakpoint-only(xs) {
     max-width: 230px;
-    top:0px;
+    top: 0px;
   }
   @include media-breakpoint-up(sm) {
     max-width: 350px;
-    top:-50px;
+    top: -50px;
   }
 
   @include media-breakpoint-only(md) {
     max-width: 270px;
-    top:-50px;
-    left:15px;
+    top: -50px;
+    left: 15px;
   }
   @include media-breakpoint-only(xl) {
     max-width: 360px;
@@ -37,7 +38,7 @@ header {border-bottom: 5px solid theme-color('primary');
 }
 
 .boxEnvios {
-  border: 1px solid #f4e715;
+  border: 1px solid theme-color("primary");
   color: rgb(255, 255, 255);
   font-size: 14px;
   padding: 5px 10px;
@@ -48,7 +49,6 @@ header {border-bottom: 5px solid theme-color('primary');
   /* @include media-breakpoint-down(xl) {
     right: 45px; 
   } */
-
 }
 
 .txtEnvios {
@@ -58,8 +58,8 @@ header {border-bottom: 5px solid theme-color('primary');
 }
 
 /* Menu Mobile */
-.navbar-toggler{
-  background-color: #f4e715;
+.navbar-toggler {
+  background-color: theme-color("primary");
   border-color: rgb(0, 0, 0);
 }
 .navbar-toggler-icon {
@@ -70,53 +70,81 @@ header {border-bottom: 5px solid theme-color('primary');
   padding-top: 1em;
 }
 
-.dropdown-item.active, .dropdown-item:active {background-color:$black;}
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: $black;
+}
 
 /* shop  */
-.page-link {background-color: $black;}
+.page-link {
+  background-color: $black;
+}
 
 .page-item.active .page-link {
-	z-index: 1;
-	color: $black;
-	background-color: #f4e715;
-	border-color: #f4e715;
+  z-index: 1;
+  color: $black;
+  background-color: theme-color("primary");
+  border-color: theme-color("primary");
 }
 
 .td-product_name > div > a {
-  color:$black;
+  color: $black;
 }
 
-.show_coupon {color:$black}
-#products_grid_before {background-color: $black;}
+.show_coupon {
+  color: $black;
+}
+#products_grid_before {
+  background-color: $black;
+}
 
 /* categories */
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color:$white;
-	background-color: $black;
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: $white;
+  background-color: $black;
 }
-.nav-pills > li > a {background-color: $black;}
+.nav-pills > li > a {
+  background-color: $black;
+}
 
 /* mini-cart */
-.popover-body {background-color: $black;}
-.h6 {color: $white!important;}
-.cart-line {color: $white!important;}
-div.col-9 {color: $primary!important;}
-#top_menu_collapse > ul > li > a > i  {color: $primary}
+.popover-body {
+  background-color: $black;
+}
+.h6 {
+  color: $white !important;
+}
+.cart-line {
+  color: $white !important;
+}
+div.col-9 {
+  color: $primary !important;
+}
+#top_menu_collapse > ul > li > a > i {
+  color: $primary;
+}
 
 /* Cart page */
-.js_add_cart_json {background-color: $black;}
-.no-decoration {color:$black;}
-.o_payment_form_pay_icon_more {color:$black;}
+.js_add_cart_json {
+  background-color: $black;
+}
+.no-decoration {
+  color: $black;
+}
+.o_payment_form_pay_icon_more {
+  color: $black;
+}
 
 /* Footer Area */
 #footer {
-  border-top: 5px solid theme-color('primary');
-  background-color: $black!important;
+  border-top: 5px solid theme-color("primary");
+  background-color: $black !important;
   color: $white;
 }
 
 .o_footer_copyright {
-  background-color: $black!important;
+  background-color: $black !important;
 }
 
 /* Links */
@@ -131,47 +159,107 @@ h6 > a:hover {
 /* Font Awesome */
 
 .fa {
-  color:$black;
+  color: $black;
 }
 
-.fa-search,.fa-minus, .fa-plus, .fa-chevron-left, .fa-heart, .fa-exchange, .fa-shopping.cart {color:$primary; background-color: $black!important;
+.fa-search,
+.fa-minus,
+.fa-plus,
+.fa-chevron-left,
+.fa-heart,
+.fa-exchange,
+.fa-shopping.cart {
+  color: $primary;
+  background-color: $black !important;
 }
 
-.white{
-  color: $white!important;
+.white {
+  color: $white !important;
 }
 
-.black{
-  color: $black!important;
+.black {
+  color: $black !important;
 }
 
-.text-warning {color: $black!important;}
+.yellow_mark {color: theme-color("primary") !important;}
+
+.text-warning {
+  color: $black !important;
+}
 
 /* breadcrumbs */
 .breadcrumb {
-	background-color: #000;
+  background-color: #000;
 }
 
-.input-group > .form-control, .input-group > .custom-select, .input-group > .custom-file {
-	width: 100%;
+.input-group > .form-control,
+.input-group > .custom-select,
+.input-group > .custom-file {
+  width: 100%;
 }
 
-div.categ_tree_level > div:nth-child(1) > a {color: #f4e715!important;}
+div.categ_tree_level > div:nth-child(1) > a {
+  color: theme-color("primary") !important;
+}
 
-li.breadcrumb-item > span {color: $white!important;}
+li.breadcrumb-item > span {
+  color: $white !important;
+}
 
-.small > a {color:$black!important}
+.small > a {
+  color: $black !important;
+}
 
 /* Ruta especifica para /web/signup/ enlace ¿ya tiene una cuenta? */
-form.oe_signup_form div.text-center.oe_login_buttons.pt-3 a.btn.btn-link.btn-sm {color:$black!important}
+form.oe_signup_form
+  div.text-center.oe_login_buttons.pt-3
+  a.btn.btn-link.btn-sm {
+  color: $black !important;
+}
 
 /* brands */
-a[href*="/shop/brands?brand="] {color:$black!important}
+a[href*="/shop/brands?brand="] {
+  color: $black !important;
+}
 
 /* downloads */
-a[href*="?unique="] {color:$black!important}
+a[href*="?unique="] {
+  color: $black !important;
+}
 
 /* Login Form */
-a[href*="reset_password"] {color:$black!important;font-size:medium ;}
-a[href*="web/signup"] {color:$black!important;font-size:medium ;}
+a[href*="reset_password"] {
+  color: $black !important;
+  font-size: medium;
+}
+a[href*="web/signup"] {
+  color: $black !important;
+  font-size: medium;
+}
 
+#products_grid.col-lg-9 .oe-height-2 {
+  height: 220px;
+}
+/* Cookie Notice */
+.bg-custom {
+  background-color: $black;
+  border-style: solid;
+  border-color: theme-color("primary");
+}
+.button-fixed {
+  bottom: 0;
+  position: fixed;
+  right: 0;
+  border-radius: 4px;
+  z-index: 10;
+}
+.fas {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Login Form */
+a[href*="mailto:info@maquinariaencants"] {
+  color: $black !important;
+  
+}

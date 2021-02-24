@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sgw_cookies_consent" name="Cookies Notice" inherit_id="website_cookie_notice.message">
+        <xpath expr="//div" position="replace">
+            <div t-if="request and
+        not request.session.get('accepted_cookies')" id="website_cookie_notice" class="row .d-none cc-cookies" role="alert">
+                <div class="col-md-4 col-sm-12 button-fixed">
+                    <div class="p-3 pb-4 bg-custom text-white">
+                        <div class="row">
+                            <div class="col-10">
+                                <h2 class="yellow_mark">Permitir Cookies</h2>
+                            </div>
+                            <div class="col-2 text-center">
+                                <i class="fa fas fa-times"></i>
+                            </div>
+                        </div>
+                        <p>Utilizamos cookies propias y de terceros para ofrecer nuestros servicios y recoger datos estadísticos. Si continúas usando este sitio, asumiremos que estás de acuerdo con ello. <a href="/legal/privacy-policy" class="alert-link">Política de Privacidad</a>.
+                        </p>
+                        <a class="btn btn-primary" href="#">OK</a>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
